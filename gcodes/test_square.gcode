@@ -1,0 +1,30 @@
+; Klipper test print - Single layer square
+; Preheat
+M104 S200
+M140 S60
+M109 S200
+M190 S60
+
+; Home
+G28
+BED_MESH_CALIBRATE
+
+; Start at front-left
+G90
+G1 Z5 F3000
+G1 X10 Y10 F6000
+G1 Z0.3 F300
+
+; Print a 100x100mm single layer square
+G91
+G1 X100 Y0 E25 F600
+G1 X0 Y100 E25 F600
+G1 X-100 Y0 E25 F600
+G1 X0 Y-100 E25 F600
+
+; Finish
+G90
+G1 Z10 F3000
+M104 S0
+M140 S0
+M84

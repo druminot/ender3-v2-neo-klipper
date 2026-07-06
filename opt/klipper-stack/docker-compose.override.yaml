@@ -1,0 +1,5 @@
+services:
+  klipper:
+    devices:
+      - /dev/klipper:/dev/klipper
+      - /dev/ttyUSB0:/dev/ttyUSB0

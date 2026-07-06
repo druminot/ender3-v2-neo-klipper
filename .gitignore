@@ -1,0 +1,16 @@
+# Build artifacts
+opt/klipper-stack/out/*.o
+opt/klipper-stack/out/*.d
+opt/klipper-stack/out/*.elf
+opt/klipper-stack/out/*.map
+opt/klipper-stack/out/*.ctr
+opt/klipper-stack/out/lib/
+opt/klipper-stack/out/src/
+
+# Keep the firmware binary, but ignore build intermediates
+!opt/klipper-stack/out/klipper.bin
+!opt/klipper-stack/out/klipper.dict
+
+# OS files
+.DS_Store
+Thumbs.db
